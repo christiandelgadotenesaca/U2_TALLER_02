@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Representante Legal</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css" />
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Datos del Representante Legal</h2>
+            <div class="form-group">
+                <label >RUC:</label>
+                <input type="text" id="ruc" value="">
+            </div>
+        
+            <div class="form-group">
+                <label>Cedula:</label>
+                <input type="text" id="cedula" value="">
+            </div>
+        
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" value="">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Apellido:</label>
+                <input type="text" id="apellido" value="">
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" value="">
+            </div>
+        
+            <div class="form-group">
+                <label>Telefono:</label>
+                <input type="text" id="telefono" value="">
+            </div>
+        
+            <div class="form-group">
+                <label>Domicilio:</label>
+                <input type="text" id="domicilio" value="">
+            </div>
+        
+            <div class="form-group">
+                <label>Empresa:</label>
+                <select id="selectEmpresa" name="selectEmpresa"></select>
+                <button onclick="agregarEmpresa()">Agregar Empresa</button>
+            </div>
+
+            <table id="tablaEmpresa" class="dynamic-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Empresa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-id="123"></td> <!-- Incluimos el id en un atributo de datos -->
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="button-group">
+                <button type="submit" class="accept" onclick="guardar_representante()" >Aceptar</button>
+                <button type="button" class="cancel">Cancelar</button>
+            </div>
+        </div>
+    </body>
+</html>

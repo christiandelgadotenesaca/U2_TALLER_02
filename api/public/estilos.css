@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 500px;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Alinea los botones al centro horizontalmente */
+}
+
+.button-group button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button-group button.accept {
+    background-color: #007BFF;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.button-group button.cancel {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+
+/* Estilos para la tabla */
+.dynamic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  /* Estilos para las celdas del encabezado */
+  .dynamic-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estilos para las celdas de datos */
+  .dynamic-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Estilos para las filas impares */
+  .dynamic-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }

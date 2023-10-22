@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "ChristianDelgado",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "exprest": "^0.0.1-alpha",
+    "mongoose": "^7.6.2"
+  }
+}
