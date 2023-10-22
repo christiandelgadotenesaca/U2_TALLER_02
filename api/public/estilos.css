@@ -63,7 +63,6 @@ body {
     color: #fff;
 }
 
-
 /* Estilos para la tabla */
 .dynamic-table {
     width: 100%;
@@ -89,3 +88,32 @@ body {
   .dynamic-table tr:nth-child(odd) {
     background-color: #f2f2f2;
   }
+
+  /* Estilo para el combo box */
+  select {
+    width: 200px; /* Ancho del select */
+    padding: 10px; /* Relleno interno */
+    font-size: 16px; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color del texto */
+    width: 70%;
+}
+
+ /* Estilo para el botón */
+ .mi-boton {
+    background-color: #2fca10; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo para el botón cuando está en estado hover (sobre) */
+.mi-boton:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}

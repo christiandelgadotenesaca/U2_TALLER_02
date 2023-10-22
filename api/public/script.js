@@ -1,5 +1,9 @@
+
+const listEmpresas = [];
+
 function guardar() {
 
+    console.log('Funcion Guardar')
     let ruc_ = document.getElementById('ruc').value
     let cedula_ = document.getElementById('cedula').value
     let nombre_ = document.getElementById('nombre').value
@@ -14,8 +18,11 @@ function guardar() {
         apellido:apellido_, 
         email:email_, 
         telefono:telefono_,
-        domicilio:domicilio_ 
+        domicilio:domicilio_,
+        empresa_detalle: listEmpresas
     }
+
+    console.log(data)
 
     return new Promise((resolve, reject) => {
         const request_options = {
@@ -67,7 +74,7 @@ listarEmpresas()
     .catch((error) => console.log(error))
 
 
-
+//Funcion que se encarga de carga el list de empresa
 function cargarSelectEmpresas(data) {
     for(let i=0; i<data.body.length; i++){
         // Crear una nueva opción para la lista desplegable
@@ -79,28 +86,24 @@ function cargarSelectEmpresas(data) {
         document.getElementById("selectEmpresa").appendChild(option);
     }
 }
-
-function agregarFilaTabla(valor, texto) {
-    var tabla = document.getElementById("tablaEmpresa");
-    var fila = tabla.insertRow(-1); // Inserta una fila al final de la tabla
-    var celda1 = fila.insertCell(0); // Inserta una celda en la nueva fila
-    var celda2 = fila.insertCell(1);
-    celda1.innerHTML = valor;
-    celda2.innerHTML = texto;
-}
-
+//Funcion llamada desde el onclick del boton agregarEmpresas
 function agregarEmpresa(){
     var select = document.getElementById("selectEmpresa");
     var valor = select.value;
     var texto = select.options[select.selectedIndex].text; 
-    agregarFilaTabla(valor, texto )
+
+    // Agregar un nuevo par código-valor al "ArrayList"
+    listEmpresas.push({id: valor, nombre: texto })
+    agregarFilaTabla()
 }
 
-function agregarColumna() {
-    var tabla = document.getElementById("miTabla");
-    for (var i = 0; i < tabla.rows.length; i++) {
-        var fila = tabla.rows[i];
-        var celda = fila.insertCell(-1); // Inserta una celda al final de cada fila
-        celda.innerHTML = "Nuevo Dato";
-    }
+
+function agregarFilaTabla() {
+    var tabla = document.getElementById("tablaEmpresa");
+    var fila = tabla.insertRow(-1); // Inserta una fila al final de la tabla
+    var celda1 = fila.insertCell(0); // Inserta una celda en la nueva fila
+    //Obtiene el ultimo elemento agregado del array list
+    const ultimoElemento = listEmpresas[listEmpresas.length - 1];
+    //Asigna
+    celda1.innerHTML = ultimoElemento.nombre;
 }
