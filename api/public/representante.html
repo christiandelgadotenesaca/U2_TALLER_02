@@ -4,8 +4,15 @@
         <title>Representante Legal</title>
         <link rel="stylesheet" type="text/css" href="estilos.css" />
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     </head>
     <body>
+        <script>
+            var socket = io.connect('http://localhost:3001/', {
+                forceNet: true
+            })
+            socket.on('mensaje', (data)=>console.log(data))
+        </script>
         <div class="container">
             <h2>Datos del Representante Legal</h2>
             <div class="form-group">
