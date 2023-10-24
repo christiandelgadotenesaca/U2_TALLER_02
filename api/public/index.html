@@ -2,9 +2,16 @@
 <html>
     <head>
         <title>Representante</title>
+        <script type="text/javascript" src="http://localhost:3001/socket.io/socket.io.js"></script>
     </head>
     <body>
         <h1>Representante</h1>
         <a href="representante.html">Representante</a>
+        <script>
+            var socket = io.connect('http://localhost:3001/', {
+                forceNet: true
+            })
+            socket.on('mensaje', (data)=>console.log(data))
+        </script>
     </body>
 </html>

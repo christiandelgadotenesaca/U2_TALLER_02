@@ -108,3 +108,5 @@ function agregarFilaTabla() {
     celda1.innerHTML = ultimoElemento.nombre;
 }
 
+
+
