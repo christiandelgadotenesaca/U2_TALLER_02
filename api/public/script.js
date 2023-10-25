@@ -44,6 +44,8 @@ function guardar_representante() {
     guardar()
         .then( (response) => {
             alert('Registro exitoso.')
+            let ruc_ = document.getElementById('ruc').value
+            consultarWebSocket(ruc_)
         } )
         .catch( (error) => {
             alert('Error al ingresar.')
@@ -95,6 +97,8 @@ function agregarEmpresa(){
     // Agregar un nuevo par código-valor al "ArrayList"
     listEmpresas.push({id: valor, nombre: texto })
     agregarFilaTabla()
+    let ruc_ = document.getElementById('ruc').value
+    consultarWebSocket(ruc_)
 }
 
 

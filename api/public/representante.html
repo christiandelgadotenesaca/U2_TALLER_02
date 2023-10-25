@@ -4,6 +4,9 @@
         <title>Representante Legal</title>
         <link rel="stylesheet" type="text/css" href="estilos.css" />
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        
+        <script type="text/javascript" src="http://localhost:3001/socket.io/socket.io.js"></script>
     </head>
     <body>
         <div class="container">
@@ -62,5 +65,21 @@
                 <button type="button" class="cancel">Cancelar</button>
             </div>
         </div>
+        <script>
+            function consultarWebSocket(ruc_){
+                console.log('consultarWebSocket')
+                var socket = io.connect('http://localhost:3001/', {
+                    forceNet: true
+                })
+                socket.emit('mensaje', ruc_);
+            
+                // Maneja el evento "mensaje" recibido del servidor
+                socket.on('mensaje', (mensaje) => {
+                    console.log('Mensaje del servidor:', mensaje);
+                    alert('Mensaje del webSocket:' + mensaje )
+                });
+            }
+            
+        </script>
     </body>
 </html>

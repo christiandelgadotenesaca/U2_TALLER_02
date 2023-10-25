@@ -12,7 +12,7 @@ app.use( body_parser.json() )
 app.use( body_parser.urlencoded({extended: false}) )
 app.use('/', express.static('public'))
 
-routes( app )
+routes(app)
 
 app.listen( config.PORT )
 console.log(`La aplicacion se encuentra arriba en http://localhost:${config.PORT}/`)
